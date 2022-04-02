@@ -2,11 +2,13 @@ package kata.one;
 
 import static org.junit.Assert.assertTrue;
 
+import lombok.extern.java.Log;
 import org.junit.jupiter.api.Test;
 
 /**
  * Unit test for simple App.
  */
+@Log
 public class AppTest 
 {
     /**
