@@ -16,7 +16,7 @@ public class App implements CommandLineRunner
 {
     public static void main( String[] args )
     {
-	    SpringApplication.run(App.class, args);
+	SpringApplication.run(App.class, args);
     }
 
     @Override
