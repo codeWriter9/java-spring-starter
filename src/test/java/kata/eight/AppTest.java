@@ -1,14 +1,16 @@
-package kata.one;
+package kata.eight;
 
 import static org.junit.Assert.assertTrue;
 
-import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.context.ActiveProfiles;
 
 /**
  * Unit test for simple App.
  */
-@Log
+@Slf4j
+@ActiveProfiles("test")
 public class AppTest 
 {
     /**
@@ -18,6 +20,6 @@ public class AppTest
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
-	log.info("Test Passed");
+	log.info( "AppTest Loaded" );
     }
 }
