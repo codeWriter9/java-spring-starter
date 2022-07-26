@@ -1,2 +1,2 @@
 # java-spring-starter
-Spring Starter With Latest Java Junit
+Maven based Spring starter with latest LTS Java and JUnit
