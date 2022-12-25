@@ -4,6 +4,7 @@ import kata.eight.App;
 import kata.eight.bean.Employee;
 import kata.eight.config.AppConfig;
 import kata.eight.repository.EmployeeRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,11 +14,13 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DataJpaTest
 @ContextConfiguration(classes = {Employee.class, EmployeeService.class, EmployeeRepository.class, App.class, AppConfig.class})
 @ActiveProfiles("test")
+@Slf4j
 public class EmployeeServiceTest {
 
     @Autowired
@@ -45,6 +48,11 @@ public class EmployeeServiceTest {
     @Test
     public void testEmployee() {
         assertTrue(service.lastName("Parker").contains(employee));
+    }
+
+    @Test
+    public void testNegative() {
+        assertFalse(service.lastName("Abigail").contains(employee));
     }
 
     @AfterEach
