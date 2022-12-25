@@ -47,3 +47,7 @@ hs_err_pid*
 ../*
 target
 target/*
+
+#intelliJ file(s)
+.idea/
+
