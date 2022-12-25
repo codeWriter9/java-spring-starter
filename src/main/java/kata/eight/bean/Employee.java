@@ -27,4 +27,6 @@ public class Employee {
     private String firstName;
     @Column
     private Integer age;
+    @Column
+    private String email;
 }
