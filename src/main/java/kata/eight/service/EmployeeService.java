@@ -18,6 +18,7 @@ public class EmployeeService {
 
     public boolean saveEmployee(Employee e) {
         try {
+            log.info("employee=>"+e);
             repository.save(e);
         } catch (Exception exception) {
             log.error(exception.getMessage(), exception);
@@ -29,11 +30,17 @@ public class EmployeeService {
     public List<Employee> lastName(String lastName) {
         List<Employee> list = null;
         try {
+            log.info("lastName=>"+lastName);
             list = repository.findByLastName(lastName);
+            log.info("list=>"+list);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
             return null;
         }
         return list;
+    }
+
+    public List<Employee> all() {
+        return (List<Employee>) repository.findAll();
     }
 }

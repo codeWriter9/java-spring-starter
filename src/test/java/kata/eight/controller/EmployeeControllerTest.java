@@ -54,6 +54,9 @@ public class EmployeeControllerTest {
                 .postForObject("http://localhost:" + port + "/employee/lastName",
                         "Parker",
                         List.class)).isNotNull().isNotEmpty();
+        assertThat(this.restTemplate
+                .getForObject("http://localhost:" + port + "/employee/all",
+                        List.class)).isNotNull().isNotEmpty();
     }
 
     @AfterEach

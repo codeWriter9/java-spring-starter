@@ -48,6 +48,7 @@ public class EmployeeServiceTest {
     @Test
     public void testEmployee() {
         assertTrue(service.lastName("Parker").contains(employee));
+        assertFalse(service.all().isEmpty());
     }
 
     @Test
