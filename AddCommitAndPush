@@ -1,0 +1,1 @@
+git add .;git commit -m "Add Fetch All Method";git push https://$USERNAME:$PASSWORD@github.com/codeWriter9/java-spring-starter.git main
