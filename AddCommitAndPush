@@ -1,1 +1,1 @@
-git add .;git commit -m "Add gcp deploy";git push https://$USERNAME:$PASSWORD@github.com/codeWriter9/java-spring-starter.git main
+git add .;git commit -m "Add Hello World";git push https://$USERNAME:$PASSWORD@github.com/codeWriter9/java-spring-starter.git main
