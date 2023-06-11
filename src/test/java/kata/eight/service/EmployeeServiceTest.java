@@ -7,6 +7,7 @@ import kata.eight.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -46,12 +47,14 @@ public class EmployeeServiceTest {
     }
 
     @Test
+    @DisplayName("Positive Test of Employee")
     public void testEmployee() {
         assertTrue(service.lastName("Parker").contains(employee));
         assertFalse(service.all().isEmpty());
     }
 
     @Test
+    @DisplayName("Negative Test of Employee")
     public void testNegative() {
         assertFalse(service.lastName("Abigail").contains(employee));
     }

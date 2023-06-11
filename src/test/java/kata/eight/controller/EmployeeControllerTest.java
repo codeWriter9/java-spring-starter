@@ -8,6 +8,7 @@ import kata.eight.service.EmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -45,6 +46,7 @@ public class EmployeeControllerTest {
     }
 
     @Test
+    @DisplayName("Postive Test of Push Employee")
     public void pushEmployee() throws Exception {
         assertThat(this.restTemplate
                 .postForObject("http://localhost:" + port + "/employee/save",
