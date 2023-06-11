@@ -1,0 +1,2 @@
+INSERT INTO employee (first_name, last_name, email, age) VALUES ('Tony', 'Stark', 'tony@starkindustries.com', 51);
+INSERT INTO employee (first_name, last_name, email, age) VALUES ('Steve', 'Rogers', 'steve.rogers@usamc.com', 121);
